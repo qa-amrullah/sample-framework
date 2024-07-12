@@ -12,42 +12,30 @@ public class RegisterPage extends BasePage{
     public RegisterPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
     @FindBy(xpath = "//*[@data-qa='signup-name']")
     public WebElement signUpName;
-
     @FindBy(xpath = "//*[@data-qa='signup-email']")
     public WebElement signUpEmail;
-
     @FindBy(xpath = "//*[@data-qa='login-email']")
     public WebElement loginEmail;
     @FindBy(xpath = "//*[@data-qa='login-password']")
     public WebElement loginPassword;
-
     @FindBy(xpath = "//*[@name='title']")
     public List<WebElement> titleRadioButtons;
-
     @FindBy(xpath = "//*[@data-qa='password']")
     public WebElement signUpPassword;
-
     @FindBy(id = "days")
     public WebElement dayDropDown;
-
     @FindBy(id = "months")
     public WebElement monthDropDown;
-
     @FindBy(id = "years")
     public WebElement yearDropDown;
-
     @FindBy(id = "newsletter")
     public WebElement newslettersCheckbox;
-
     @FindBy(id = "first_name")
     public WebElement firstNameInput;
-
     @FindBy(id = "last_name")
     public WebElement lastNameInput;
-
     @FindBy(id = "company")
     public WebElement companyInput;
 
