@@ -1,11 +1,11 @@
-package com.automation.stepDefinitions;
+package com.eComApp.steps;
 
-import com.automation.pages.RegisterPage;
+import com.eComApp.pages.RegisterPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class LoginStepDefs {
+public class LoginSteps {
     RegisterPage registerPage = new RegisterPage();
     @When("I enter the correct {string}  and {string}")
     public void i_enter_the_correct_and(String email, String password) {

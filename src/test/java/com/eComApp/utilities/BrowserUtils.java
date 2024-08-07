@@ -1,4 +1,4 @@
-package com.automation.utilities;
+package com.eComApp.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;

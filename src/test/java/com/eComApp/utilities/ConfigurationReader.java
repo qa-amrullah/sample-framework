@@ -1,4 +1,4 @@
-package com.automation.utilities;
+package com.eComApp.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

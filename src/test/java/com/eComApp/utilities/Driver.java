@@ -1,11 +1,10 @@
-package com.automation.utilities;
+package com.eComApp.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.io.File;
 import java.time.Duration;
 
 public class Driver {
@@ -36,8 +35,8 @@ public class Driver {
             switch (browser.toLowerCase()) {
                 case "chrome":
                     ChromeOptions options = new ChromeOptions();
-                    options.addExtensions(new File(System.getProperty("user.dir") + "/Ad Block Plus.crx"));
-                    BrowserUtils.wait(3);
+                    options.addArguments("--disable-popup-blocking");
+                    options.addArguments("--disable-notifications");
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();

@@ -1,11 +1,10 @@
-@smoke
 Feature: Login with valid and invalid credentials
 
   Background:
     Given the user is on the login sign up page
   Scenario Outline: As user I can login with valid credentials
     When I click Signup - Login link
-    Then I verify 'Login to your account' is visible
+    Then I verify 'Login to your account' message is visible
     When I enter the correct "<email>"  and "<password>"
     And I click 'Login' button
     Then I verify Logged in as "<username>" is visible
@@ -19,7 +18,7 @@ Feature: Login with valid and invalid credentials
 
   Scenario: As user I can't login with invalid credentials
     When I click Signup - Login link
-    Then I verify 'Login to your account' is visible
+    Then I verify 'Login to your account' message is visible
     When I enter the wrong email address and password
     And I click 'Login' button
-    Then I verify 'Your email or password is incorrect!' is visible
+    Then I verify 'Your email or password is incorrect!' message is visible

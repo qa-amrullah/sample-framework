@@ -1,7 +1,7 @@
-package com.automation.stepDefinitions;
+package com.eComApp.steps;
 
-import com.automation.utilities.BrowserUtils;
-import com.automation.utilities.Driver;
+import com.eComApp.utilities.BrowserUtils;
+import com.eComApp.utilities.Driver;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

@@ -1,9 +1,9 @@
-package com.automation.stepDefinitions;
+package com.eComApp.steps;
 
-import com.automation.pages.RegisterPage;
-import com.automation.utilities.BrowserUtils;
-import com.automation.utilities.ConfigurationReader;
-import com.automation.utilities.Driver;
+import com.eComApp.pages.RegisterPage;
+import com.eComApp.utilities.BrowserUtils;
+import com.eComApp.utilities.ConfigurationReader;
+import com.eComApp.utilities.Driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,10 +13,9 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
 import java.util.Random;
 
-public class RegistrationStepDefs {
+public class RegistrationSteps {
 
 
 
@@ -38,8 +37,8 @@ public class RegistrationStepDefs {
         registerPage.clickButton(buttonName);
     }
 
-    @Then("I verify {string} is visible")
-    public void i_verify_is_visible(String elementText) {
+    @Then("I verify {string} message is visible")
+    public void i_verify_is_message_visible(String elementText) {
         Assert.assertTrue(BrowserUtils.isVisible(elementText));
     }
     Faker faker = new Faker();
