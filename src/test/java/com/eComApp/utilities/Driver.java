@@ -29,7 +29,6 @@ public class Driver {
             browser = ConfigurationReader.getProperty("browser");
         }
 
-        //if driver object does not exist it creates an object of the specific browser and returns it at the end
 
         if (driverPool.get() == null) {
             switch (browser.toLowerCase()) {
@@ -43,7 +42,6 @@ public class Driver {
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "firefox":
-                    //WebDriverManager.chromedriver().setup();
                     driverPool.set(new FirefoxDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -56,9 +54,6 @@ public class Driver {
     }
 
     public static void closeDriver() {
-        /**
-         If driver is not null, close the driver and reassign the value to null.
-         */
         if (driverPool.get() != null) {
             driverPool.get().quit();
             driverPool.remove();

@@ -1,4 +1,4 @@
-@wip
+
 Feature: Login with valid credentials and Logout
   Background:
     Given the user is on the login sign up page

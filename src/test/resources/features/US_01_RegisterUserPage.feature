@@ -1,4 +1,3 @@
-@smoke
 Feature: Register account for the first time
 
   Background: User is on the sign up page
